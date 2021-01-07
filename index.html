@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="format-detection" content="email=no" />
+  <meta charset="utf-8">
+  <title>般若模板</title>
+  <link href="//public.pannacloud.com/css/animate.min.css" type="text/css" rel="stylesheet" />
+  <link href="//public.pannacloud.com/css/panna_com.1.0.3.css" type="text/css" rel="stylesheet" />
+  <link href="//public.pannacloud.com/swiper/3.0.8/css/swiper.min.css" type="text/css" rel="stylesheet" />
+  <link href="//public.pannacloud.com/css/popup.css" type="text/css" rel="stylesheet" />
+  <link href="css/index.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="//public.pannacloud.com/jquery/jquery-3.1.1.min.js"></script>
+  <script src="js/preloadjs.js"></script>
+  <script src="js/soundjs.js"></script>
+  <script src="//public.pannacloud.com/js/pn_com.js"></script>
+  <script type="text/javascript" src="//public.pannacloud.com/swiper/3.0.8/js/swiper.min.js"></script>
+  <script type="text/javascript" src="//public.pannacloud.com/js/popup.js"></script>
+  <script src="//res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+  <script src="//cdn.pannacloud.com/js/share.1.0.1.js"></script>
+  <script type="text/javascript">
+    SHARE.hideCopyUrl();
+    SHARE.shareOption({
+      link: "/2018/zuiwuhan/0515_ticket/redirect/redirect.html",
+      pic: "/2018/zuiwuhan/0515_ticket/img/share.jpg",
+      title: "“寻找湖北高校最具活力大学生社团”投票正在进行中，快来支持我吧！",
+      desc: "寻找湖北高校最具活力大学生社团",
+      success: function () {
+
+      }
+    });
+  </script>
+</head>
+
+<body>
+
+  <div class="loading loading-panna" id="loading">
+    <!--<div class="rotateTipArea">-->
+    <!--&lt;!&ndash;loading,可选black,white&ndash;&gt;-->
+    <!--<embed src="http://public.pannacloud.com/img/white.svg" width="50" height="50"-->
+    <!--type="image/svg+xml"-->
+    <!--pluginspage="http://www.adobe.com/svg/viewer/install/" class="rotateSvg"/>-->
+    <!--<p class="rotateTipText"> 请锁屏后横屏浏览</p>-->
+    <!--</div>-->
+    <div class="loadingArea">
+      <!--loading,可选loading1～loading8-->
+      <embed src="//public.pannacloud.com/img/loading/loading8.svg" width="70" height="70" type="image/svg+xml"
+        pluginspage="http://www.adobe.com/svg/viewer/install/" class="loadingSvg" />
+      <p class="loading-percent">10%</p>
+    </div>
+  </div>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide page page1 preloadBg"
+        data-src="https://q2cdn.pannacloud.com/test/xft/2018/audioLoader/img/bg1.jpg">
+        <img data-src="img/share.jpg" class="preload _sCenter zuan1 animated agz hidden">
+        <img data-src="img/zuan.png" class="preload noResize zuan2 animated agz hidden">
+      </div>
+      <div class="swiper-slide page page2 preloadBg"
+        data-src="https://q2cdn.pannacloud.com/test/xft/2018/audioLoader/img/bg2.jpg">
+        <img data-src="img/share.jpg" class="preload pig animated agz hidden _sCenter">
+      </div>
+      <div class="swiper-slide page page3 preloadBg"
+        data-src="https://q2cdn.pannacloud.com/test/xft/2018/audioLoader/img/bg3.jpg">
+      </div>
+      <div class="swiper-slide page page4 preloadBg"
+        data-src="https://q2cdn.pannacloud.com/test/xft/2018/audioLoader/img/bg4.jpg">
+        <img data-id="pig" class="preload pig animated agz hidden _sCenter">
+      </div>
+      <div class="swiper-slide page page5 preloadBg"
+        data-src="https://q2cdn.pannacloud.com/test/xft/2018/audioLoader/img/bg5.jpg">
+
+      </div>
+      <div class="swiper-slide page page6 preloadBg"
+        data-src="https://q2cdn.pannacloud.com/test/xft/2018/audioLoader/img/bg6.jpg">
+
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/pn_loader.js"></script>
+  <script type="text/javascript">
+    window.onload = function () {
+      $.comFunc().config({
+        prevent: true, //是否阻止微信端页面整体下拉
+        arrow: true, // 是否显示滑动指示箭头
+        test: true, //是否显示测试文字
+        screenLock: true, //是否显示横屏锁定提示
+        //screenLockUrl:"img/bg2.jpg",   //锁定提示图片
+        //music:'mp3/music.mp3',   // 播放音乐
+        arrowImgUrl: "img/share.jpg", // 不定义图片路径，则使用默认图片
+        //musicImgUrl:["images/m-open.png","images/m-close.png"]  // 同上 1播放时图片 2关闭时图片
+      })
+    };
+    var sourceData = [{
+        src: 'https://q2cdn.pannacloud.com/test/xft/2018/audioLoader/img/share.jpg',
+        id: 'pig'
+      },
+      {
+        src: 'https://q2cdn.pannacloud.com/test/xft/2018/audioLoader/mp3/music.mp3',
+        id: 'bgm'
+      },
+      {
+        src: 'https://q2cdn.pannacloud.com/test/xft/2018/audioLoader/mp3/oh.mp3',
+        id: 'music'
+      }
+    ];
+
+    $(function () {
+
+      $.bugFixed()
+
+      $.winInit();
+
+      $.loader({
+        staticResource: sourceData,
+        bgmCtrl: true,
+        //            bgmCtrlIcon: [
+        //                {src: 'img/music_on.png', id: 'music-open'},
+        //                {src: 'img/music_off.png', id: 'music-close'}
+        //            ],
+        handleLoading: function (evt) {
+          var cProgress = Math.floor(evt.loaded * 100);
+          $('.loading-percent').html(cProgress + '%');
+        },
+        handleFileLoaded: function (event) {
+          if (event.item.id == 'pig') {
+            console.log('猪加载好了');
+          }
+        },
+        handleComplete: function () {
+          $('.loading').remove();
+          $('.page1').children().show();
+        }
+      });
+
+      var mySwiper = new Swiper('.swiper-container', {
+        direction: 'vertical',
+        resistanceRatio: 0,
+        onSlideChangeEnd: function () {
+          var i = mySwiper.activeIndex;
+          $(".swiper-slide").each(function () {
+            if ($(this).hasClass("swiper-slide-active")) { // 当前页显示，其余页隐藏
+              $(this).children().show();
+              $(this).siblings().children().hide();
+            }
+          });
+          if (i == $('.swiper-slide').length - 1) { // 最后一页不提示滑动
+            $(".arrow").hide();
+          } else {
+            $(".arrow").show();
+          }
+        }
+      });
+
+      // 日志记录范例——注意：此范例需要放置在关键请求的回调中，对于异常情况进行记录
+
+      $.log({
+        logtype: 'Warn', // [Debug/Error/Info/Warn],
+        virtualpath: '', // 项目路径从根目录开始，例如/2020/shimao/1028_shimao
+        group: '',   // 日志组名——一般为项目目录名，例如1028_shimao
+        openid: '',   // 用户openid  选填：当涉及到重要行为监控时带上，如抽奖，分享等
+        querystring: '',  // 当前受监控接口提交的数据详情，选填,例如：id=14&usertype=gold&rest=18,
+        message: '',   // 接口调用失败后端返回的信息，选填,一般对应 res.Msg
+        dingtalk: false   // Boolean值，选填,是否启用钉钉通知
+      })
+
+
+
+      $.statistics('statistics'); //流量统计
+
+    })
+  </script>
+  <script type="text/javascript" src="/js/analytic.js"></script>
+</body>
+
+</html>
